@@ -1,0 +1,24 @@
+I was thinking that just having three levels may not be enough.
+I think that the best course of action is to have three prompts,
+And then use cosine similarity from all three prompts to produce a score,
+May need to use an algorithm.
+I have included multiple potential prompts which can be used.
+
+
+PROMPT 1 (HIGH WALKABILITY, this should be an above average street, not just "walkable" but a top of the line street):
+- A highly walkable neighborhood with wide sidewalks, trees, and pedestrian paths.
+- A highly walkable neighborhood and aesthetically pleasing neighborhood with trees, no trash, few cars, and wide sidewalks.
+- A walkable street with wide sidewalks, frequent crosswalks, trees for shade, and little vehicle traffic. The environment is clean and visually pleasing.
+A pedestrian-friendly neighborhood with landscaping, benches, and safe crossings. Streets are calm and shaded by trees.
+
+PROMPT 2 (MEDIUM WALKABILITY, this is just an average street with not a lot of focus on aesthetics but there are still places to walk for pedestrians): 
+- A somewhat walkable area with limited sidewalks and some vehicle traffic.
+- A somewhat walkable neighborhood which is somewhat clean and has some sidewalks and some vehicle traffic.
+- A neighborhood with some walkability features, such as occasional sidewalks and moderate vehicle traffic. Limited greenery and average maintenance.
+Streets with patchy pedestrian infrastructure, some walkable areas, and modest visual appeal.
+
+PROMPT 3 (LOW WALKABILITY, no pedestrian support, very dirty, lack of greenery, car-dominated):
+- A car-focused neighborhood with no sidewalks and high-speed traffic.
+- A dirty area filled with cars and trash which do not support pedestrian traffic, there are no sidewalks.
+- A neighborhood lacking sidewalks or pedestrian crossings. Streets are dominated by fast-moving vehicles and offer no protection or amenities for pedestrians.
+A car-oriented area with no pedestrian infrastructure, minimal greenery, and poor maintenance.
