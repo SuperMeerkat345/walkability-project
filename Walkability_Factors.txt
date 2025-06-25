@@ -1,0 +1,19 @@
+WALKABILITY FACTORS
+--------------------------------------------------------------------------
+Density - Crucial property of walkability, concentrates more people and places within walking distance.
+
+Pedestrian infrastructure:
+- Sidewalks and walkways (Safe, well maintained, well lit)
+- Crosswalks and pedestrian crossings (Clearly marked)
+- Pedestrian signals (Safe to cross a street)
+- Benches 
+
+Safety and Security:
+- Minimal traffic (Secure from traffic dangers)
+- Traffic calming measures (Speed bumps, traffic circles, raised sidewalks)
+- Lightposts providing well lit streets (Enhances visibility improving safety at night)
+
+Aesthetics and comfort: 
+- Pleasant environment (Landscaping, public art)
+- Greenery (Trees provide shade and weather protection)
+- Clean streets (No trash)
