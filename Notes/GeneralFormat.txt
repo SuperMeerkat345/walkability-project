@@ -1,0 +1,17 @@
+This is the general format of the data:
+
+CENSUS TRACT 1 (directory)
+- General Coordinates (directory)
+-- Coordinates (directory)
+--- img1 (.png)
+--- img2 (.png)
+--- ... Pattern repeats until [End of <Coordinates> directory]
+-- Coordinates (directory)
+-- ... Pattern repeats
+-- Satellite View (.png) [End of <General Coordinates> directory]
+- General Coordinates (directory)
+- General Coordinates (directory)
+- ... Pattern repeats until [End of <CENSUS TRACT 1> directory]
+
+CENSUS TRACT 2 (directory)
+...

@@ -1,0 +1,28 @@
+Walkability Assessment Project - Week 1 Plan
+Objective: In this first week, you will begin exploring how to assess neighborhood walkability from Google Street View (GSV) images using computer vision techniques. You will define what makes a neighborhood walkable, design textual prompts to represent different walkability levels, collect a small dataset of images, and manually label them.
+
+
+[DONE]
+1. Understand Walkability and Its Importance - Read about what “walkability” means and why it is important for urban design and health. - Discuss how the built environment (e.g., sidewalks, trees, traffic) can affect physical activity and health outcomes. 
+
+[DONE]
+2. Design Walkability Prompts (Descriptions) Create a few textual descriptions (called “prompts”) for different levels of walkability. These will later be used to compare with image features using AI.
+Example prompts: - High Walkability: “A highly walkable neighborhood with wide sidewalks, trees, and pedestrian paths.” - Medium Walkability: “A somewhat walkable area with limited sidewalks and some vehicle traffic.” - Low Walkability: “A car-focused neighborhood with no sidewalks and high-speed traffic.”
+Write your own versions or expand with more examples if you feel creative.
+
+[IN_PROGRESS]
+3. Retrieve Street View Images Zhuo has provided the data sources. Your task is to: - Retrieve 1 or 2 sample Google Street View images for all census tracts (to label later). - Organize the images into folders labeled by neighborhood.
+Tools You May Use: - Python (with libraries like Pillow, or OpenCV) - Basic file management to save and organize images locally
+
+Label by Census Tract - 1/2 images from each tract
+
+[NOT_STARTED]
+4. Manual Labeling of Images - For each image, decide whether the scene looks Low, Medium, or High in walkability. - Label the images manually using a CSV file with columns: - image_filename - walkability_label - You may use Excel, Google Sheets, or Python to create your CSV.
+Deliverables for Week 1: - A folder of at least 100 Google Street View images (organized by area) - A CSV file where each image has a label: Low, Medium, or High walkability - Your prompt descriptions written clearly in a text file or notebook
+
+Reminder: You are not training an AI yet. This week is all about setting up your data and learning to observe and define what makes a neighborhood walkable. Be thoughtful and consistent in your labeling!
+Let us know if you have any questions or run into issues retrieving images or writing your prompts.
+
+
+For later:
+Store in dictionary
