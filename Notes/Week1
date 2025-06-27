@@ -10,7 +10,7 @@ Objective: In this first week, you will begin exploring how to assess neighborho
 Example prompts: - High Walkability: “A highly walkable neighborhood with wide sidewalks, trees, and pedestrian paths.” - Medium Walkability: “A somewhat walkable area with limited sidewalks and some vehicle traffic.” - Low Walkability: “A car-focused neighborhood with no sidewalks and high-speed traffic.”
 Write your own versions or expand with more examples if you feel creative.
 
-[IN_PROGRESS]
+[Done]
 3. Retrieve Street View Images Zhuo has provided the data sources. Your task is to: - Retrieve 1 or 2 sample Google Street View images for all census tracts (to label later). - Organize the images into folders labeled by neighborhood.
 Tools You May Use: - Python (with libraries like Pillow, or OpenCV) - Basic file management to save and organize images locally
 

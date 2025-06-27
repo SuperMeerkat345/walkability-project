@@ -49,10 +49,9 @@ def generate_validation_set(dataPath, outputPath, validationSetName = "validatio
 
         # Deal with case where it gets the skyview
         if os.path.isfile(blockPath) and len(os.listdir(groupPath)) <= 1:
-            continue # no more images so just move on from this tract
+            continue # no more block groups so just move on
         elif os.path.isfile(blockPath) and len(os.listdir(groupPath)) > 1:
-            blockPath = groupPath + "/" + os.listdir(groupPath)[1]
-        #blockPath = groupPath + "/" + os.listdir(groupPath)[1] if os.path.isfile(blockPath) else blockPath
+            blockPath = groupPath + "/" + os.listdir(groupPath)[1] # move on to the 
         
         
         for imgI in range(imgNum):
