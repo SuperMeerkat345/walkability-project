@@ -1,0 +1,2 @@
+If you want to run nextimg.py, 
+you must be in the ManualValidation directory
