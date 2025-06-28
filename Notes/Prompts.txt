@@ -1,9 +1,37 @@
-I was thinking that just having three levels may not be enough.
-I think that the best course of action is to have three prompts,
-And then use cosine similarity from all three prompts to produce a score,
-May need to use an algorithm.
-I have included multiple potential prompts which can be used.
+UPDATED PROMPTS FOR 5 LEVELS:
 
+Very Low (1):
+No visible sidewalks, paths, or pedestrian infrastructure.
+No safe crossing points or pedestrian-friendly zones.
+Unsafe or obstructed pathways (e.g., heavy traffic or no buffer from cars).
+Unpleasant environment for walking (e.g., harsh weather exposure, poor lighting).
+
+Low (2):
+Sidewalks may be present but are narrow, poorly maintained, or interrupted.
+Inconsistent pedestrian infrastructure (e.g., gaps in sidewalks).
+Unsafe crossings or poorly lit areas.
+Limited amenities or lack of trees and shade for comfort.
+
+Medium (3):
+Sidewalks are visible, but narrow or uneven.
+Some pedestrian infrastructure but not always well-maintained.
+A few crosswalks, but may still require caution.
+Some benches or trees visible, but not consistently available.
+
+High (4):
+Wide, well-maintained sidewalks.
+Clear crosswalks and pedestrian-friendly traffic signals.
+Visible amenities like benches, trees, or small parks.
+Adequate lighting and safe spaces for walking.
+
+Very High (5):
+Wide, smooth sidewalks that are well-maintained.
+Numerous, safe crosswalks, pedestrian zones, and clear traffic management.
+Lots of amenities (benches, parks, restaurants) within walking distance.
+Comfortable environment with shade and good lighting for safety.
+
+
+OLD PROMPTS FOR 3 LEVELS:
 
 PROMPT 1 (HIGH WALKABILITY, this should be an above average street, not just "walkable" but a top of the line street):
 - A highly walkable neighborhood with wide sidewalks, trees, and pedestrian paths.
