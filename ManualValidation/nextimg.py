@@ -1,3 +1,5 @@
+# DEPRECATED USE nextimg2.py
+
 rating_mappings = {
     "1": "very_low",
     "2": "low",

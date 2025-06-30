@@ -1,3 +1,5 @@
+# NEW/UPDATED VERSION WITH DATAFRAME
+
 import os
 import subprocess
 import pandas as pd
@@ -23,7 +25,7 @@ os.system("kill $(pidof feh)")
 
 # Generate rating mappings:
 rating_mappings = {
-    "0": "Null",
+    "0": "Null", # Set to Null (no) value
     "1": "very_low",
     "2": "low",
     "3": "medium",
