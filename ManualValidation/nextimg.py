@@ -1,7 +1,7 @@
 rating_mappings = {
     "1": "very_low",
     "2": "low",
-    "3": "mid",
+    "3": "medium",
     "4": "high",
     "5": "very_high"
 }
@@ -51,4 +51,4 @@ if rating in rating_mappings:
 
     print(f"Updated rating to '{text_rating}' for line {linenumber}")
 else:
-    pring(f"Invalid input '{rating}' Please input a digit 1-5\nlinenumber and validation.csv has not been modified")
+    print(f"Invalid input '{rating}' Please input a digit 1-5\nlinenumber and validation.csv has not been modified")
