@@ -16,7 +16,7 @@ Tools You May Use: - Python (with libraries like Pillow, or OpenCV) - Basic file
 
 Label by Census Tract - 1/2 images from each tract
 
-[NOT_STARTED]
+[DONE] (Labeled only 100 of the images in the csv, can do more if have time or need need more test sets)
 4. Manual Labeling of Images - For each image, decide whether the scene looks Low, Medium, or High in walkability. - Label the images manually using a CSV file with columns: - image_filename - walkability_label - You may use Excel, Google Sheets, or Python to create your CSV.
 Deliverables for Week 1: - A folder of at least 100 Google Street View images (organized by area) - A CSV file where each image has a label: Low, Medium, or High walkability - Your prompt descriptions written clearly in a text file or notebook
 
