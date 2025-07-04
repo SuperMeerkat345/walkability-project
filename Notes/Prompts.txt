@@ -1,5 +1,13 @@
 UPDATED PROMPTS FOR 5 LEVELS:
 
+prompts = [
+    "No visible sidewalks, paths, or pedestrian infrastructure. No safe crossing points or pedestrian-friendly zones. Unsafe or obstructed pathways (e.g., heavy traffic, no buffer from cars). Wide roads with fast-moving traffic, making pedestrians feel exposed. Unpleasant, unattractive environment (e.g., industrial feel, trash, graffiti, no greenery).",
+    "Sidewalks may be present but are narrow, poorly maintained, or interrupted. Inconsistent or minimal pedestrian infrastructure (e.g., sidewalk gaps). Unsafe crossings or poorly lit areas. Roads are still wide with limited traffic-calming features. Sparse landscaping or aesthetic elements; few trees or visual appeal.",
+    "Sidewalks are visible but may be narrow, uneven, or partially obstructed. Some pedestrian infrastructure, but with maintenance or connectivity issues. A few crosswalks, but crossing can still be difficult or intimidating. Moderately sized roads; some pedestrian protection like curb extensions or medians. Some greenery or pleasant features (trees, shopfronts), but not consistent.",
+    "Wide, well-maintained sidewalks that allow comfortable walking. Clear, safe crosswalks with pedestrian-friendly traffic signals. Visible amenities like benches, trees, or small parks. Streets are narrower or include pedestrian buffers, making crossing safer. Clean and visually appealing environment, with consistent shade and landscaping.",
+    "Wide, smooth, continuous sidewalks in excellent condition. Numerous, well-designed crosswalks and pedestrian-only areas. Abundant amenities like benches, parks, cafés, and shaded spots. Narrow or traffic-calmed streets that prioritize pedestrians over cars. Highly attractive surroundings: clean, landscaped, well-lit, and inviting.",
+]
+
 Very Low (1):
     No visible sidewalks, paths, or pedestrian infrastructure.
     No safe crossing points or pedestrian-friendly zones.

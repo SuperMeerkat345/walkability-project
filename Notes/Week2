@@ -1,0 +1,48 @@
+Walkability Assessment Project – Week 2 Plan
+Objective: This week, you will use an AI model (CLIP) to generate walkability scores for street view images based on text-image similarity. Since you do not have access to GPUs, we will use a Hugging Face-hosted CLIP model via their API. You will write code to compare each image against your written walkability prompts and evaluate how well the model agrees with your manual labels from Week 1.
+
+1. Learn About CLIP (Contrastive Language-Image Pre-training)
+CLIP is a neural network that can compare images and text in a shared embedding space.
+Instead of training a new model, we use a pre-trained CLIP model hosted by Hugging Face.
+Useful links:
+CLIP paper (OpenAI) [https://openai.com/research/clip]
+Hugging Face CLIP Documentation [https://huggingface.co/openai/clip-vit-base-patch32]
+
+2. Install Required Python Packages:
+pip install requests torch torchvision transformers
+
+3. Write Your Walkability Prompts Use 3–5 walkability prompts from Week 1. Examples:
+“A highly walkable neighborhood with wide sidewalks, trees, and pedestrian paths.”
+“A car-focused neighborhood with no sidewalks and high-speed traffic.”
+Save these in a list or text file in your code.
+
+4. Use Hugging Face API to Compare Prompts and Images Here’s a simple pipeline using Hugging Face Inference API:
+import requests
+
+API_URL = "https://api-inference.huggingface.co/models/openai/clip-vit-base-patch32"
+headers = {"Authorization": f"Bearer YOUR_HUGGINGFACE_TOKEN"}  # Get this from https://huggingface.co/settings/tokens
+
+def query(image_path, prompt):
+    with open(image_path, "rb") as f:
+        image_bytes = f.read()
+    payload = {
+        "inputs": {
+            "image": image_bytes,
+            "parameters": {"candidate_labels": [prompt]}
+        }
+    }
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()
+For each image, loop through all prompts and store the similarity score (if returned).
+Assign the prompt with the highest score as the predicted label.
+Note: The free API tier has request limits, so test with a subset of your data first.
+
+5. Compare With Manual Labels
+Create a table comparing your Week 1 labels and the predicted walkability label.
+Compute a simple accuracy metric: how often do they agree?
+
+6. Deliverables for Week 2
+Python script or notebook that runs prompt-image similarity using Hugging Face CLIP.
+A table (CSV or Excel) comparing each image’s manual label and predicted label.
+A short paragraph: Were the predictions reasonable? Which prompts worked best?
+
