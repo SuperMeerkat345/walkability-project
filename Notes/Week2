@@ -33,6 +33,8 @@ def query(image_path, prompt):
     }
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
+
+
 For each image, loop through all prompts and store the similarity score (if returned).
 Assign the prompt with the highest score as the predicted label.
 Note: The free API tier has request limits, so test with a subset of your data first.
