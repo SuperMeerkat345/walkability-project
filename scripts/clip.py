@@ -27,18 +27,26 @@ labels = [
 # END VARIABLES ==========================================================================
 
 # Load the model
-model = AutoModel.from_pretrained("openai/clip-vit-base-patch32", torch_dtype=torch.bfloat16, attn_implementation="sdpa")
+model = AutoModel.from_pretrained(
+    "openai/clip-vit-base-patch32", # Model name to load from huggingface
+    torch_dtype=torch.bfloat16, # Data type precision
+    attn_implementation="sdpa") # Attention mechanism
+
 processor = AutoProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 # Preprocess inputs (return prompts and images in a format the model expects)
-inputs = processor(text=labels, images=test_img, return_tensors="pt", padding=True)
+inputs = processor(
+    text=labels, # Prompts
+    images=test_img, # image
+    return_tensors="pt", # Return result as pytorch tensors
+    padding=True)
 
 # Run the model
-outputs = model(**inputs)
-logits_per_image = outputs.logits_per_image
+outputs = model(**inputs) # unpack dictionary
+logits_per_image = outputs.logits_per_image # Similarity between each image and each prompt (raw scores, not probability)
 
 # Compute probabilities
-probs = logits_per_image.softmax(dim=1)
+probs = logits_per_image.softmax(dim=1) 
 
 # Find highest probability label
 most_likely_idx = probs.argmax(dim=1).item()

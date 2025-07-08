@@ -1,4 +1,4 @@
-index,label,path
+index,label_manual,path
 0,high,"./ValidationSet/39035106900/(41.431057, -81.69422060087697)_0.png"
 1,high,"./ValidationSet/39035106900/(41.431057, -81.69422060087697)_180.png"
 2,high,"./ValidationSet/39035113801/(41.49346267071857, -81.64873941215296)_90.png"
