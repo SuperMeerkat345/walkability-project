@@ -1,3 +1,5 @@
+# GENERAL FORMAT FOR ACCESSING CLIP
+
 import requests
 import torch
 from PIL import Image # download with pip install pillow
@@ -12,8 +14,8 @@ from transformers import AutoProcessor, AutoModel
 # VARIABLES ===============================================================================
 
 # Needs to be ran from the base walkability-project directory
-test_img_path = "./ValidationSet/39035117400/(41.56136772139518, -81.56501323510685)_270.png"
-test_img = Image.open(test_img_path)
+#test_img_path = "./ValidationSet/39035117400/(41.56136772139518, -81.56501323510685)_270.png"
+#test_img = Image.open(test_img_path)
 
 # Establish prompts but call them 
 labels = [
