@@ -118,17 +118,17 @@ labelsv5 = [
 
 LABELS = labelsv5
 
-img_paths = data["path"].head(7).tolist()
+img_paths = data["path"].head(2).tolist()
 # END OF VARIABLES ============================================================
 
 
 def test_model(img_paths, LABELS):
     print("===> Labeling images with DINO...")
-    label_results = label_imgs(img_paths, LABELS, box_threshold=0.29, text_threshold=0.24, batch_size=1)
-    #print(label_results)
+    dino_results = label_imgs(img_paths, LABELS, box_threshold=0.29, text_threshold=0.24, batch_size=1)
+    print(dino_results)
 
-    print("===> Analyzing labels with BLIP...")
-    blip_results = analyze_labels(img_paths)
+    print("===> Analyzing labels with BLIP-2...")
+    blip_results = analyze_labels(img_paths, dino_results)
     #print(blip_results)
 
     print("===> Writing results to validation CSV...")
