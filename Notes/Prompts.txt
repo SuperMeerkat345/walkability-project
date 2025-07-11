@@ -1,3 +1,20 @@
+UPDATE:
+I will be using DINO+BLIP from now on
+
+Step 1: Use DINO to detect “concrete” areas
+        ↓
+Step 2: For each box:
+    - Crop it from the image
+    - Feed it to BLIP with a natural-language question
+        ↓
+Step 3: BLIP returns label (e.g., "driveway", "sidewalk")
+        ↓
+Step 4: Annotate the original image with correct label
+
+
+
+
+
 UPDATED PROMPTS FOR 5 LEVELS:
 
 prompts = [

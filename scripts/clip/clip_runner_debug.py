@@ -1,3 +1,5 @@
+#https://huggingface.co/docs/transformers/en/model_doc/clip?usage=AutoModel
+
 import requests
 import torch
 from PIL import Image # download with pip install pillow
