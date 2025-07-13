@@ -1,17 +1,15 @@
-import requests
-
 import torch
 from PIL import Image
 from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
 from tqdm import tqdm
 
 # VARIABLES =======================================================
-LABELS = [
-    "a pedestrian sidewalk which is seperated from the road", 
-    "an asphalt road", 
-    "a crosswalk",
-    "a tree"
-]
+# LABELS = [
+#     "a pedestrian sidewalk which is seperated from the road", 
+#     "an asphalt road", 
+#     "a crosswalk",
+#     "a tree"
+# ]
 
 # END OF VARIABLES ================================================
 
@@ -25,7 +23,7 @@ def label_imgs(img_paths, LABELS, box_threshold=0.4, text_threshold=0.3, batch_s
     model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device)
 
     # Begin inputs
-    print("==> Generating inputs")
+    print("==> Preparing inputs")
 
     # Load images (needs to be in double array or not?)
     print("-> Loading images")
@@ -69,5 +67,5 @@ def label_imgs(img_paths, LABELS, box_threshold=0.4, text_threshold=0.3, batch_s
     return results_all
 
 
-#print(label_imgs(["./ValidationSet/39035117600/(41.5767606, -81.5547632)_270.png", 
-#"./ValidationSet/39035117400/(41.56136772139518, -81.56501323510685)_270.png"], LABELS))
+# print(label_imgs(["./ValidationSet/39035117600/(41.5767606, -81.5547632)_270.png", 
+# "./ValidationSet/39035117400/(41.56136772139518, -81.56501323510685)_270.png"], LABELS))
