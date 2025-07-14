@@ -44,5 +44,9 @@ def show_result(img_path, result, show_scores=False):
     print("==> Opening image in feh image viewer")
     os.system(f"feh --zoom 300 --geometry 1200x1200+3000+0 \"./temp_output.png\" &") # zoom 300%, some geometry parameters specified as well
 
+    prompt = input("Press Enter to continue or type 'exit' to quit: ")
+    if prompt.lower() == 'exit':
+        print("Exiting...")
+        exit(0) 
 
 #show_result(img_path, result, show_scores=True)

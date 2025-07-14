@@ -131,11 +131,26 @@ labelsv6 = [
     "a green grassy lawn",
     "a green leafy tree with brown branches",
     "a car in the road"
-    #"a crosswalk",
-    #"a crosswalk across the road",
 ]
 
-LABELS = labelsv6
+labelsv7 = [
+    "a concrete sidewalk for pedestrians",
+    "a crosswalk or pedestrian crossing",
+    "a traffic light or stop sign",
+    "a paved road with light traffic",
+    "a paved road with heavy traffic",
+    "a residential driveway",
+    "a parking lot or parked cars",
+    "a fence or barrier blocking pedestrians",
+    "a green grassy lawn",
+    "a green leafy tree providing shade",
+    "street lighting or lamp posts",
+    "a bus stop or public transit",
+    "construction or road work",
+    "a bike lane or cycling path"
+]
+
+LABELS = labelsv7
 
 img_paths = data["path"]
 # END OF VARIABLES ============================================================

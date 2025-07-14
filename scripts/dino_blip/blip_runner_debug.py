@@ -40,8 +40,14 @@ def analyze_labels(img_paths, dino_results):
         context = ", ".join(set(labels))  # remove duplicates
         question = (
             f"This image contains: {context}.\n"
-            "Based on these elements and their overall fit in the image, how walkable is this area on a scale from 1 (not walkable) "
-            "to 5 (very walkable)? Respond with only a number between 1 and 5."
+            "Rate walkability from 1-5 where:\n"
+            "1 = Dangerous/impossible (no sidewalks, heavy traffic, major barriers)\n"
+            "2 = Poor (minimal pedestrian infrastructure, safety concerns)\n"
+            "3 = Fair (basic sidewalks but missing amenities or safety features)\n"
+            "4 = Good (safe sidewalks, crossings, moderate traffic)\n"
+            "5 = Excellent (complete pedestrian infrastructure, safe, accessible)\n"
+            "Consider sidewalk presence, traffic levels, crossing safety, barriers, and greenery.\n"
+            "Respond with only a number between 1 and 5."
         )
 
         inputs = processor(images=image, text=question, return_tensors="pt").to("cuda", torch.float16)
