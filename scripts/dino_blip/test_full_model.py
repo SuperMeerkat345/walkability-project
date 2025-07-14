@@ -150,7 +150,20 @@ labelsv7 = [
     "a bike lane or cycling path"
 ]
 
-LABELS = labelsv7
+labelsv8 = [
+    "a concrete sidewalk",
+    "a paved street or road", 
+    "a crosswalk with white stripes",
+    "a stop sign",
+    "a traffic light",
+    "a parked car",
+    "a fence or barrier",
+    "a tree",
+    "a house or building",
+    "a lawn or grass area"
+]
+
+LABELS = labelsv8
 
 img_paths = data["path"]
 # END OF VARIABLES ============================================================

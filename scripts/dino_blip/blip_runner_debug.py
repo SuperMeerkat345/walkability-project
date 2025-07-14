@@ -39,15 +39,14 @@ def analyze_labels(img_paths, dino_results):
     for image, labels in tqdm(zip(images, dino_labels), total=len(images), desc="Running inferences"):
         context = ", ".join(set(labels))  # remove duplicates
         question = (
-            f"This image contains: {context}.\n"
-            "Rate walkability from 1-5 where:\n"
-            "1 = Dangerous/impossible (no sidewalks, heavy traffic, major barriers)\n"
-            "2 = Poor (minimal pedestrian infrastructure, safety concerns)\n"
-            "3 = Fair (basic sidewalks but missing amenities or safety features)\n"
-            "4 = Good (safe sidewalks, crossings, moderate traffic)\n"
-            "5 = Excellent (complete pedestrian infrastructure, safe, accessible)\n"
-            "Consider sidewalk presence, traffic levels, crossing safety, barriers, and greenery.\n"
-            "Respond with only a number between 1 and 5."
+            f"Image contains: {context}.\n"
+            "Rate walkability 1-5:\n"
+            "1=No sidewalks, dangerous\n"
+            "2=Poor pedestrian access\n" 
+            "3=Basic sidewalks\n"
+            "4=Good walkability\n"
+            "5=Excellent for walking\n"
+            "Answer with one number only:"
         )
 
         inputs = processor(images=image, text=question, return_tensors="pt").to("cuda", torch.float16)
