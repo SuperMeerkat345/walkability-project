@@ -8,8 +8,8 @@ from tqdm import tqdm
 
 print("-> dino")
 from dino_runner_debug import label_imgs
-print("-> dino debugger")
-from show_dino_results import show_result
+# print("-> dino debugger")
+# from show_dino_results import show_result
 print("-> blip")
 from blip_runner_debug import analyze_labels
 
@@ -154,29 +154,72 @@ labelsv8 = [
     "a concrete sidewalk",
     "a paved street or road", 
     "a crosswalk with white stripes",
-    "a stop sign",
-    "a traffic light",
     "a parked car",
     "a fence or barrier",
-    "a tree",
+    "a green leafy tree",
     "a house or building",
     "a lawn or grass area"
 ]
 
-LABELS = labelsv8
+labelsv9 = [
+    "a thin concrete sidewalk for pedestrians",
+    "a sidewalk viewed from the side",
+    "a wide paved street or road made of asphalt",
+    #"a crosswalk with white stripes", # commented out because DINO is bad at detecting crosswalks
+    "a parked car",
+    "a fence or barrier",
+    "a green leafy tree",
+    "a green bush or shrub",
+    "a house or building",
+    "a lawn or grass area"
+]
 
-img_paths = data["path"]
+labelsv10 = [
+    "a very narrow sidewalk beside houses",
+    "a very wide road for vehicles",
+    #"a crosswalk with white stripes",
+    "a parked car",
+    "a fence or barrier",
+    "a green leafy tree",
+    "a house or building", 
+    "a lawn or grass area",
+    "a green bush or shrub"
+]
+
+labelsv11 = [
+    # "a narrow sidewalk not connected to the road", # Get rid of dino detection for sidewalks
+    # "a sidewalk that looks like a road",
+    #"a very narrow sidewalk beside houses",
+    #"a wide road for vehicles",
+    "a car or vehicle",
+    "a fence or barrier",
+    "a green leafy tree with brown branches and a brown trunk",
+    "a house with windows", 
+    "a green lawn with green grassy grass",
+    "a green bush or shrub",
+    "a black trash can or garbage bin",
+    #"a fire hydrant", # make sure it doesn't get confused with a garbage bin
+    #"a street light or lamp post",
+    "trash or litter on the ground",
+    #"a traffic sign", # DINO thinks that the google logo is a traffic sign LMAO
+    #"cracks in the ground or pavement",
+]
+
+
+LABELS = labelsv11
+
+img_paths = data["path"] # Use only the first 10 images for testing
 # END OF VARIABLES ============================================================
 
 
 def test_model(img_paths, LABELS):
     print("===> Labeling images with DINO...")
-    dino_results = label_imgs(img_paths, LABELS, box_threshold=0.29, text_threshold=0.24, batch_size=1)
+    dino_results = label_imgs(img_paths, LABELS, box_threshold=0.3, text_threshold=0.25, batch_size=1)
     #print(dino_results)
 
-    print("===> Showing DINO results...")
-    for i in tqdm(range(len(img_paths)), desc="Showing results"):
-        show_result(img_paths[i], dino_results[i], show_scores=True)
+    # print("===> Showing DINO results...")
+    # for i in tqdm(range(len(img_paths)), desc="Showing results"):
+    #     show_result(img_paths[i], dino_results[i], show_scores=True)
 
     print("===> Analyzing labels with BLIP-2...")
     blip_results = analyze_labels(img_paths, dino_results)

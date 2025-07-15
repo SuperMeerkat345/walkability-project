@@ -47,6 +47,8 @@ def show_result(img_path, result, show_scores=False):
     prompt = input("Press Enter to continue or type 'exit' to quit: ")
     if prompt.lower() == 'exit':
         print("Exiting...")
+        os.system("kill $(pidof feh)")
         exit(0) 
+
 
 #show_result(img_path, result, show_scores=True)
