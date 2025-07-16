@@ -10,8 +10,10 @@ print("-> dino")
 from dino_runner_debug import label_imgs
 # print("-> dino debugger")
 # from show_dino_results import show_result
-print("-> blip")
-from blip_runner_debug import analyze_labels
+print("-> dino post-processing")
+from dino_post_processing import post_process
+print("-> score categorization")
+from categorize_score import categorize_score
 
 # VARIABLES ===================================================================
 data = pd.read_csv("./full_validation.csv")
@@ -221,12 +223,16 @@ def test_model(img_paths, LABELS):
     # for i in tqdm(range(len(img_paths)), desc="Showing results"):
     #     show_result(img_paths[i], dino_results[i], show_scores=True)
 
-    print("===> Analyzing labels with BLIP-1...")
-    blip_results = analyze_labels(img_paths, dino_results)
-    #print(blip_results)
+    # print("===> Analyzing labels with BLIP-1...")
+    # blip_results = analyze_labels(img_paths, dino_results)
+    # #print(blip_results)
 
+    print("===> Postprocessing DINO results...")
+    post_processing_results = post_process(dino_results)
+
+    
     print("===> Writing results to validation CSV...")
-    data["label_model"] = blip_results
+    data["label_model"] = post_processing_results
     data.to_csv("./full_validation.csv", index=False)
     
     print("===> Exited without issues")

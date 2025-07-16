@@ -13,6 +13,9 @@ from tqdm import tqdm
 
 # END OF VARIABLES ================================================
 
+# method for getting all the possible labels
+#label_names = set()
+
 def label_imgs(img_paths, LABELS, box_threshold=0.4, text_threshold=0.3, batch_size=1):
     # Load model
     print("==> Loading model")
@@ -60,10 +63,16 @@ def label_imgs(img_paths, LABELS, box_threshold=0.4, text_threshold=0.3, batch_s
             target_sizes=target_sizes
         )
 
+        # # getting label names 
+        # print(results)
+        # for label in results[0]["labels"]:
+        #     if label not in label_names:
+        #         label_names.add(label)
+
+
         # Append the batch to the results
         results_all.extend(results)
 
-    
     return results_all
 
 
