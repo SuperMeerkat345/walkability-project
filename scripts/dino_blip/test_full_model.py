@@ -193,11 +193,11 @@ labelsv11 = [
     #"a wide road for vehicles",
     "a car or vehicle",
     "a fence or barrier",
-    "a green leafy tree with brown branches and a brown trunk",
-    "a house with windows", 
+    "a green leafy tree",
+    "a house", 
     "a green lawn with green grassy grass",
     "a green bush or shrub",
-    "a black trash can or garbage bin",
+    "a black trashcan or garbage bin",
     #"a fire hydrant", # make sure it doesn't get confused with a garbage bin
     #"a street light or lamp post",
     "trash or litter on the ground",
@@ -221,7 +221,7 @@ def test_model(img_paths, LABELS):
     # for i in tqdm(range(len(img_paths)), desc="Showing results"):
     #     show_result(img_paths[i], dino_results[i], show_scores=True)
 
-    print("===> Analyzing labels with BLIP-2...")
+    print("===> Analyzing labels with BLIP-1...")
     blip_results = analyze_labels(img_paths, dino_results)
     #print(blip_results)
 
