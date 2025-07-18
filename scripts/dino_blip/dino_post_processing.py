@@ -1,4 +1,5 @@
 import numpy as np
+from tqdm import tqdm
 
 label_scores = {
     'a green tree a green bush': 1, 
@@ -19,7 +20,7 @@ label_scores = {
 
 def post_process(dino_results):
     scores = []
-    for dino_result in dino_results:
+    for dino_result in tqdm(dino_results, desc="Scoring"):
         score = 0 
         for label in dino_result["text_labels"]:
             score += 0 if label not in label_scores else label_scores[label]
